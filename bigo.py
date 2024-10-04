@@ -17,7 +17,6 @@ UT EID 2: ark3398
 """
 
 
-# TODO: implement this function. You may delete this comment when you are done.
 def length_of_longest_substring_n3(s):
     """
     Finds the length of the longest substring without repeating characters
@@ -29,26 +28,20 @@ def length_of_longest_substring_n3(s):
     """
     maximum = 0
     x = len(s)
-    
     for i in range(x):
       z = [0] * 256
       length = 0
       for j in range(i, x):
             value = ord(s[j])
-            z[value] += 1
-                  
+            z[value] += 1 
             if z[value] > 1:
                   break
-            
-            length += 1
-                  
+            length += 1  
             if length > maximum:
                  maximum = length
-    
     return maximum
 
 
-# TODO: implement this function. You may delete this comment when you are done.
 def length_of_longest_substring_n2(s):
     """
     Finds the length of the longest substring without repeating characters
@@ -62,15 +55,12 @@ def length_of_longest_substring_n2(s):
     """
     maximum = 0
     x = len(s)
-
     for i in range(x):
          z = [0] * 256
          length = 0
-
          for j in range(i, x):
               value = ord(s[j])
               z[value] += 1
-
               if z[value] > 1:
                    break
               length += 1
@@ -79,7 +69,6 @@ def length_of_longest_substring_n2(s):
     return maximum
 
 
-# TODO: implement this function. You may delete this comment when you are done.
 def length_of_longest_substring_n(s):
     """
     Finds the length of the longest substring without repeating characters

@@ -29,13 +29,13 @@ def length_of_longest_substring_n3(s):
     maximum = 0
     x = len(s)
     for i in range(x):
-      z = [0] * 256
-      length = 0
-      for j in range(i, x):
+        z = [0] * 256
+        length = 0
+        for j in range(i, x):
             value = ord(s[j])
             z[value] += 1
             if z[value] > 1:
-                  break
+                break
             length += 1
             maximum = max(maximum, length)
     return maximum
@@ -55,15 +55,15 @@ def length_of_longest_substring_n2(s):
     maximum = 0
     x = len(s)
     for i in range(x):
-         z = [0] * 256
-         length = 0
-         for j in range(i, x):
-              value = ord(s[j])
-              z[value] += 1
-              if z[value] > 1:
-                   break
-              length += 1
-              maximum = max(maximum, length)
+        z = [0] * 256
+        length = 0
+        for j in range(i, x):
+            value = ord(s[j])
+            z[value] += 1
+            if z[value] > 1:
+                break
+            length += 1
+            maximum = max(maximum, length)
     return maximum
 
 
@@ -84,11 +84,10 @@ def length_of_longest_substring_n(s):
     x = 0
     z = [0] * 256
     for i in range(len(s)):
-         output = ord(s[i])
-         z[output] += 1
-
-         while z[output] > 1:
-              z[ord(s[x])] -= 1
-              x += 1
-         maximum = max(maximum, i - x + 1)
+        output = ord(s[i])
+        z[output] += 1
+        while z[output] > 1:
+            z[ord(s[x])] -= 1
+            x += 1
+        maximum = max(maximum, i - x + 1)
     return maximum

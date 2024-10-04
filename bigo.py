@@ -33,12 +33,11 @@ def length_of_longest_substring_n3(s):
       length = 0
       for j in range(i, x):
             value = ord(s[j])
-            z[value] += 1 
+            z[value] += 1
             if z[value] > 1:
                   break
-            length += 1  
-            if length > maximum:
-                 maximum = length
+            length += 1
+            maximum = max(maximum, length)
     return maximum
 
 
@@ -64,8 +63,7 @@ def length_of_longest_substring_n2(s):
               if z[value] > 1:
                    break
               length += 1
-              if length > maximum:
-                   maximum = length
+              maximum = max(maximum, length)
     return maximum
 
 
